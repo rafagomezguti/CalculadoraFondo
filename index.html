@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Calculadora Fondo Familia Castellar</title>
+    <title>Calcular Cuota</title>
 </head>
 <body>
 
@@ -18,19 +18,19 @@
           <form id="formulario" name="formulario" class="needs-validation" novalidate>
             
             <div class="row">
-              <div class="col-sm-8 col-md-4">
+              <div class="col-sm-6 col-md-6">
                 <div class="mb-3">
                   <label for="nombreCompleto" class="form-label">Nombre del solicitante</label>
                   <input type="text" name="nombreCompleto"  id="nombreCompleto" class="form-control" placeholder="Nombre Completo" required>
                 </div>
               </div>
     
-              <div class="col-sm-8 col-md-4">
+              <div class="col-sm-6 col-md-6">
                 <div class="mb-3">
                   <label for="prestamo" class="form-label">Valor del préstamo</label>
                   <div class="input-group mb-3">
                     <span class="input-group-text">$</span>
-                    <input type="text" id="prestamo" class="form-control" required  aria-label="Amount (to the nearest dollar)">
+                    <input type="text" id="prestamo" class="form-control" required inputmode="numeric"  aria-label="Amount (to the nearest dollar)">
                   </div>
                 </div>
               </div>
@@ -53,11 +53,11 @@
                 </div>
       
                 <div class="row">
-                  <div class="col">
+                  <div class="col-sm-6 col-md-6 mx-4">
                     <input type="checkbox" class="form-check-input" id="beneficiarioCheck">
                     <label for="Opciones" class="form-check-label">Beneficiario</label>
                   </div>
-                  <div class="col">
+                  <div class="col-sm-6 col-md-6 mx-4">
                     <input type="checkbox" class="form-check-input" id="externoCheck">
                     <label class="form-check-label" for="Opciones">Externo</label>
                   </div>
@@ -66,35 +66,28 @@
             </div>
           </form>
 
-            <div class="mb-3">
+            <div class="mb-3 my-3">
               <button class="btn btn-primary" type="button" onclick="calcularCuotas()">Calcular</button>
             </div>
     
-          
-          
-
             <div class="mb-3 py-5" id="resultado" style="display:none;">
               
               <div class="mb-3">
                 <h2 >Detalle de cuotas</h2>
               </div>
-
-                <div class="table-container">
-                    <table class="table table-hover">
-                        <tr>
-                          <th class="table-primary"># Cuotas</th>
-                          <th class="table-primary">Abono a Capital</th>
-                          <th class="table-primary">Interés</th>
-                          <th class="table-primary">Cuota fija</th>
-                          <th class="table-primary">Seguro</th>
-                          <th class="table-primary">Cuota Total</th>
-                        </tr>
-                        <tbody id="detalle_cuotas">
-                        </tbody>
-                      </table>  
-                </div>
-
               
+              <table class="table table-hover">
+                <tr>
+                  <th class="table-primary"># Cuotas</th>
+                  <th class="table-primary">Abono a Capital</th>
+                  <th class="table-primary">Interés</th>
+                  <th class="table-primary">Cuota fija</th>
+                  <th class="table-primary">Seguro</th>
+                  <th class="table-primary">Cuota Total</th>
+                </tr>
+                <tbody id="detalle_cuotas">
+                </tbody>
+              </table>
       
               <div class="py-3">
                 <h2 class="mb-3">Total a pagar: <span id="total_pagar"></span></h2>
