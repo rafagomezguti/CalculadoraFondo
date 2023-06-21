@@ -2,3 +2,12 @@ h1 {
     
     text-align: center;
   }
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table{
+  width: max-content;
+}
